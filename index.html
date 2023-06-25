@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<!--
+Copyright (c) 2003-2023, CKSource Holding sp. z o.o. All rights reserved.
+For licensing, see LICENSE.md or http://ckeditor.com/license
+-->
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Source code editing and HTML support editor</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="demo.css" />
+	<link rel="stylesheet" href="content.css" />
+	<!-- <script src="./dist/ckeditor.js"></script>
+        <script src="./dist/ckbox.js"></script>
+		<script src="./dist/main.js"></script> -->
+	<!-- <script src="https://cdn.ckeditor.com/ckeditor5/12.3.1/classic/ckeditor.js"></script> -->
+
+</head>
+
+<body>
+	<div class="header-wrapper">
+		<h1>match</h1>
+	</div>
+
+	<div>
+
+		<div class="editor-wrapper">
+			<div id="cke5-source-code-demo">
+			</div>
+		</div>
+
+
+
+
+		<script>
+			// Add initial CKEditor instance
+			ClassicEditor.create(document.querySelector('#cke5-source-code-demo'));
+
+			function addRow() {
+				// Create a new CKEditor instance
+				const newEditorElement = document.createElement('div');
+				newEditorElement.id = `cke5-source-code-demo-${document.querySelectorAll('.ck-editor__editable').length + 1}`;
+				document.querySelector('.editor-wrapper').appendChild(newEditorElement);
+				ClassicEditor.create(newEditorElement);
+			}
+
+		</script> 
+
+<!-- 		
+		<div style="margin-top:1.1em;">
+			<button onclick="addRow()">Add Row</button>
+		</div> -->
+
+
+		<!-- <script src="https://cdn.ckbox.io/CKBox/1.2.1/ckbox.js"></script>
+		<script src="./dist/main.js"></script>
+	</div> -->
+
+	<!-- <div>
+		<h3>&nbsp;Set the correct response&nbsp;</h3>
+	
+
+
+
+
+		<script>
+			// Add initial CKEditor instance
+			ClassicEditor.create(document.querySelector('#cke5-source-code-demo'));
+
+			function addRow() {
+				// Create a new CKEditor instance
+				const newEditorElement = document.createElement('div');
+				newEditorElement.id = `cke5-source-code-demo-${document.querySelectorAll('.ck-editor__editable').length + 1}`;
+				document.querySelector('.editor-wrapper').appendChild(newEditorElement);
+				ClassicEditor.create(newEditorElement);
+			}
+
+		</script> -->
+
+		<!-- <script>
+			function onDragStart(event) {
+				event
+					.dataTransfer
+					.setData('text/plain', event.target.id);
+				event.currentTarget.style.backgroundColor = 'yellow';
+			}
+
+			function onDragOver(event) {
+				event.preventDefault();
+			}
+
+			function onDrop(event) {
+				const id = event
+					.dataTransfer
+					.getData('text');
+
+				const draggableElement = document.getElementById(id);
+				const dropzone = event.target;
+				dropzone.appendChild(draggableElement);
+				event.dataTransfer.clearData();
+			}
+		</script>
+		<div style="margin-top:1.1em;">
+			<button onclick="addRow()">Add Row</button>
+		</div>
+		<div class="example-parent">
+			<div class="example-origin" ondragover="onDragOver(event);" ondrop="onDrop(event);" style="display: flex;">
+				<div id="Apple" class="example-draggable" draggable="true" ondragstart="onDragStart(event);">
+					Apple &nbsp;
+				</div>
+				<div id="Banana" class="example-draggable" draggable="true" ondragstart="onDragStart(event);">
+					Banana &nbsp;
+				</div>
+				<div id="Orange" class="example-draggable" draggable="true" ondragstart="onDragStart(event);">
+					Orange &nbsp;
+				</div>
+				<div id="Guava" class="example-draggable" draggable="true" ondragstart="onDragStart(event);">
+					Guava &nbsp;
+				</div>
+			</div>
+		</div>
+		<img id="drag1" src="./asset/images/apple.jpg" draggable="true" ondragstart="drag(event)" width="236" height="69">
+		<img id="drag1" src="./asset/images/cat.jpg" draggable="true" ondragstart="drag(event)" width="236" height="69">
+		<script>
+			
+			function allowDrop(e) {
+				e.preventDefault();
+			}
+
+			function drag(e) {
+				e.dataTransfer.setData("text", e.target.id);
+			}
+
+			function drop(e) {
+				e.preventDefault();
+				var data = e.dataTransfer.getData("text");
+				e.target.appendChild(document.getElementById(data));
+			}
+		</script> -->
+
+		<script src="https://cdn.ckbox.io/CKBox/1.2.1/ckbox.js"></script>
+		<script src="./dist/main.js"></script>
+	</div> 
+
+
+</body>
+
+
+</html>
